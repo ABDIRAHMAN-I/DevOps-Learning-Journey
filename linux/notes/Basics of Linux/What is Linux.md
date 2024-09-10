@@ -1,4 +1,4 @@
-# What is Linux?
+## What is Linux?
 
 An open-source, operating system. It’s the backbone of many servers, networks, and cloud infrastructure.
 
