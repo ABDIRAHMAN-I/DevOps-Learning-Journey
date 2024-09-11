@@ -1,3 +1,6 @@
+
+ ![DevOps]()
+
 # DevOps Learning Journey
 
 Welcome to my DevOps learning repository! This repository is designed to track my progress as I navigate through various modules of this DevOps bootcamp. It will serve as a central hub for all my notes, labs, and project work. 
