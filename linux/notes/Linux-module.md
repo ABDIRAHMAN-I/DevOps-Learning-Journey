@@ -3,18 +3,19 @@
     - [What are Linux distributions?](#what-are-linux-distributions?)    
     - [Setting up Linux on your computer](#setting-up-linux-on-your-computer)  
     - [Linux terminal](#linux-terminal)
-    - [Linux file system](#linux-file-system)
 
-2. [What are Linux commands](#what-are-linux-commands)
+2. [Linux file system](#linux-file-system)
 3. [Linux shortcuts](#linux-shortcuts)
 4. [Linux Commands](#linux-commands)
+    - [What are Linux commands](#what-are-linux-commands)
     - [File and Directory Management Commands](#file-and-directory-management-commands)
 5. [](#)
 6. [](#)
-7. [](#)  
-8. [](#)
+7. [](#)
+8. [](#)  
 9. [](#)
 10. [](#)
+11. [](#)
 
 
 
@@ -81,6 +82,21 @@ Each directory in the Linux file system has a specific purpose, and together the
 - **`/srv`**: Data for services provided by the system (e.g., web servers).
 - **`/run`**: Runtime data (e.g., system information since the last boot).
   
+
+
+
+## Linux shortcuts
+
+How to open up the terminal - **Ctrl Alt T**
+
+Make the writing bigger - **Ctrl Shift +**
+
+Clear the screen - **Ctrl L**
+
+How to exit the typing mode - **Ctrl D**
+
+## Linux Commands
+
 ## **What are Linux commands?**
 
 Textual instructions that tell the OS what to do can be entered directly into the terminal, are case-sensitive, and can include various options and arguments to modify their behavior.
@@ -97,19 +113,6 @@ Textual instructions that tell the OS what to do can be entered directly into th
 **The _options_ modify how the action is performed.**
 
 **The _arguments_ tell the command what files or directories to act on.**
-
-
-## Linux shortcuts
-
-How to open up the terminal - **Ctrl Alt T**
-
-Make the writing bigger - **Ctrl Shift +**
-
-Clear the screen - **Ctrl L**
-
-How to exit the typing mode - **Ctrl D**
-
-## Linux Commands
 
 ## File and Directory Management Commands
 
