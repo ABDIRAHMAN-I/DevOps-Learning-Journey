@@ -67,7 +67,7 @@ For those who haven’t heard of it, Bandit is a wargame that helps you sharpen 
 
 ## 🤔 Challenges Faced:
 
-One of the toughest levels I tackled had me searching for a file with very specific properties using commands like `find ./inhere -type f -size 1033c` and `cat file.txt | sort | grep`. It took a while, and I struggled with it, but finally cracking it felt *so* satisfying. That’s what makes the challenge worth it.
+
 
 ---
 
