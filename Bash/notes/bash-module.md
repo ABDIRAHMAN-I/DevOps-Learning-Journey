@@ -1,1 +1,12 @@
-
+# Table of Contents
+1. [What is bash?](#what-is-bash)
+2. [What is shebang?](#what-is-shebang)
+3. [Comments](#comments)
+4. [Linux Commands](#linux-commands)
+6. [Running scripts from anywhere](#running-scripts-from-anywhere)
+7. [Variables](#variables)
+8. [Parameters](#parameters)  
+9. [Arithmetic Expansion](#arithmetic-expansion)
+10. [Comparison operators](#comparison-operators)
+11. [If statements](#if-statements)
+12. [](#)
