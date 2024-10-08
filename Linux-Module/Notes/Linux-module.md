@@ -3,7 +3,6 @@
     - [What are Linux distributions?](#what-are-linux-distributions?)    
     - [Setting up Linux on your computer](#setting-up-linux-on-your-computer)  
     - [Linux terminal](#linux-terminal)
-
 2. [Linux file system](#linux-file-system)
 3. [Linux shortcuts](#linux-shortcuts)
 4. [Linux Commands](#linux-commands)
