@@ -17,7 +17,11 @@
     - [Networking and Remote Management Commands](#networking-and-remote-management-commands)
     - [Permission and Ownership Commands](#permission-and-ownership-commands)
     - [Downloading Files](#downloading-files)
-11. [](#)
+9. [Data Redirection](#data-redirection)
+10. [Environment Variables](#environment-variables)
+11. [Vim Mode](#vim-mode)   
+   
+    
 
 
 
