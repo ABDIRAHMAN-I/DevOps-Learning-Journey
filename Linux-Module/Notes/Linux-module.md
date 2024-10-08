@@ -400,11 +400,258 @@ chmod +x script.sh
 - **`wget`**: A command-line utility for downloading files from the web. It supports downloading files via HTTP, HTTPS, and FTP, and is great for handling large files and recursive downloads.
     - **Example**: `wget https://example.com/file.zip`
 
+# Data Redirection
+
+In Linux, **standard streams** refer to three primary channels used for input and output during the execution of programs. These are:
+
+1. **standard input (stdin)** - 
+- This is the default stream from which a program reads its input. Typically, it refers to the keyboard, but it can also be redirected to read from files or other input sources.
+- Example: `cat` reads from `stdin` by default
+
+1. **standard output (stdout**) - 
+- This is the default stream to which a program writes its output. Typically, it refers to the terminal or console. You can redirect `stdout` to files or other destinations.
+- Example: Writing the output of a command to a file
+
+1. **standard error (stderr)** - 
+- This stream is used for error messages or diagnostics. Like `stdout`, it normally goes to the terminal but can be redirected independently of `stdout`.
+- Example: Redirecting error messages to a separate file.
+
+### Redirection:
+
+- **Redirect stdout** to a file: `command > file`
+- **Redirect stderr** to a file: `command 2> file`
+- **Redirect both stdout and stderr** to the same file: `command > file 2>&1`
+- **Read input from a file**: `command < file`
 
 
+# Environment Variables
+
+In Linux, environment variables are key-value pairs used to configure the system and control program behavior. they are are used to store information like:
+
+- user preferences
+- system paths
+- configuration settings
+
+They allow users to customize various settings like the default editor, language preferences, or the `PATH` for finding executable files. 
+
+Common variables include `PATH`, `HOME`, and `USER`. They can be set temporarily in a session using the `export` command or made permanent by adding them to configuration files like `~/.bashrc`. 
+
+Environment variables are useful for tasks such as managing application versions, setting network proxies, and automating scripts. For instance, they help define database credentials, configure debugging tools, or specify which web browser or language settings the system should use by default. This flexibility makes environment variables essential for both system configuration and efficient workflow management.
+
+The `printenv` command is used to display the environment variables and their values for the current shell session.
+
+By running this command, you can see all the variables that are currently set, including system variables like `PATH`, `HOME`, and user-defined variables.
+
+The `env` command is very similar to `printenv`, but `env` also has additional functionality for manipulating the environment when running a command.
+
+- `printenv` is primarily used for displaying environment variables.
+- `env` can display environment variables **and** also modify the environment for running a command.
+
+The `export` command in Linux is used to set environment variables or make existing shell variables available to child processes. 
+
+Once a variable is exported, it is passed on to any program or script run from that shell session.
+
+The `$` symbol is used to **reference** or **access the value** of a variable.
+
+## **Difference between non-exported and exported**
+
+### 1. **Normal (Non-exported) Variable**:
+
+- A normal variable is only available within the current shell (the current session or shell environment).
+- It is **not** passed to child processes (such as scripts or commands executed from the shell).
+- It exists only in the shell where it was defined.
+
+### Example:
+
+`MY_VAR`="Hello World"
+`echo $MY_VAR`  # Output: Hello World
+`./my_script.sh`  # The script cannot access MY_VAR
+
+In this case, `MY_VAR` is only available in the current shell. If you try to access `MY_VAR` inside a script or child process (like `my_script.sh`), it won’t be recognized because it hasn't been exported.
+
+### 2. **Exported Variable**:
+
+- An exported variable is not only available in the current shell, but it is also passed on to any child processes (programs or scripts) run from that shell.
+- Exporting makes the variable part of the environment for all sub-processes.
+
+### Example:
+
+`export MY_VAR`="Hello World"
+`echo $MY_VAR`  # Output: Hello World
+`./my_script.sh`  # The script can access MY_VAR
+
+### Setting permanent **Variables**:
+
+modify Zsh's configuration files, by adding your variable at the bottom and saving it.
+
+- open your Zsh configuration file: `vim` .zshrc
+- then go to the bottom of the file and enter insert mode: `O`this will do both for you
+- save the file and exit: `:wq!`
+- then finally to set permanently: `source` .zshrc
+
+The `unset` command in Linux is used to remove variables or functions from the shell environment. When you use `unset` on a variable, it removes it from the environment, meaning it is no longer accessible in the current shell session or any child processes.
+
+`MY_VAR`="Hello"
+`echo` $MY_VAR   # Output: Hello
+`unset` MY_VAR
+`echo` $MY_VAR   # No output (variable is unset)
+
+### Adding a Directory to `PATH`
+
+1. **Check the current value of `PATH`**:
+
+`echo` $PATH
+
+Each directory listed is a location where the system will search for executables. In this example:
+
+- `/usr/local/sbin`
+- `/usr/local/bin`
+- `/usr/sbin`
+- `/usr/bin`
+- `/sbin`
+- `/bin`
+
+1. **Append a new directory to `PATH`**:
+Use `:` as a separator when adding new paths to `PATH`. Here's an example of appending `/usr/local/mydir` to the existing `PATH`:
+
+`export` PATH="${PATH}:/usr/local/mydir”
+
+1. **Verify the change**:
+After appending, check if the new path is added:
+
+`echo` $PATH
+
+## Alias
+
+An **alias** is a shortcut or a shorthand command that you create to simplify or customize your command line experience. Aliases allow you to define new commands or shorten existing ones by associating them with longer or more complex commands.
+
+**Creating an Alias**:
+
+- You can create an alias using the `alias` command followed by the name you want for the alias and the command it should run.
+
+syntax: `alias` alias_name='command_to_run’ 
+
+or if I want it to read something: `alias` alias_name=’echo”what_to_read”’ 
+
+if I want to save it permanently, use the same method as before:
+
+- open your Zsh configuration file: `vim` .zshrc
+- then go to the bottom of the file and enter insert mode: `O`this will do both for you
+- save the file and exit: `:wq!`
+- then finally to set permanently: `source` .zshrc
+
+**Change PATH Permanently**
+
+how to make a script run from any directory 
+
+come back to this one when you have time
+
+**Standard enviroment variables** 
+
+how to access the values of enviroment variable:
+
+#!/bin/bash
+
+echo “Executable paths: $PATH”
+
+echo “Default language: $LANG”
+
+**assigning enviroment variable to local variables** makes our code more readable and easier to work with. example:
+
+### **Example:**
+
+Let's say you have an environment variable named `HOME` that stores the home directory path, and you want to use this value multiple times in a script.
+
+### Without local variables:
+
+```bash
+bash
+Copy code
+#!/bin/bash
+
+echo "Home directory: $HOME"
+cd $HOME/projects
+mkdir $HOME/projects/new_project
+echo "New project directory created at $HOME/projects/new_project"
+
+```
+
+In this example, `$HOME` is used multiple times directly, which can make the code harder to manage if you need to use other environment variables or perform complex logic. Let's improve it using a local variable.
+
+### With local variables:
+
+```bash
+bash
+Copy code
+#!/bin/bash
+
+# Assign environment variable to a local variable
+home_dir="$HOME"
+
+echo "Home directory: $home_dir"
+cd "$home_dir/projects"
+mkdir "$home_dir/projects/new_project"
+echo "New project directory created at $home_dir/projects/new_project"
+
+```
+
+### **Benefits:**
+
+1. **Readability**: Using a more descriptive local variable (like `home_dir`) makes it easier to understand the context of the variable throughout the script.
+2. **Consistency**: If the environment variable changes, you only need to modify it in one place.
+3. **Maintainability**: If you have multiple environment variables or complex logic, assigning them to local variables reduces repetition and improves maintainability.
 
 
+# Vim mode
 
+
+**command mode** - used for deleting text or copying lines. 
+
+*moving around the text - left (H), right (L), down (J), up (K),* 
+
+*beginning of the line (0), end of the line ($)*
+
+*to jump to a specific line press **:(num)** the number you want*
+
+*search for a particular word press **/(word)** followed by the word you want*
+
+*if there are multiple word with the same name press **n** for the next word with the same name.*
+
+*to delete an entire line press **dd*** 
+
+*to delete a letter press **x***
+
+*to copy a letter press **y***
+
+*to copy a line press **yy***
+
+*to cut a line press **dd***
+
+*to delete the section after the curser capital **D***
+
+*to paste text press **p***
+
+*press **u** to undo*
+
+*to start a new line and enter insert mode press **o***
+
+*press **Ctrl r** to redo last change*
+
+*to set numbers for each line press **:set number**  and to exit press **:set nonumber***
+
+*to enable syntax highlighting press **:syntax on** and to turn off press **:syntax off***
+
+*Press **Esc** to exit each mode*
+
+*to save your work type the following, **:wq! w** = write (i.e save) and **q** = quit, sometimes it doesn't let you so you have to overide it by using the **!*** 
+
+*if you don't want to save changes and just quit without saving type **:q!***
+
+*if you want to save changes and not quit **:w***
+
+**insert mode** - used to insert and edit text. Press **i** to enter this mode 
+
+**visual mode** - used for selecting text in a visual format. press **v**  to enter this mode
 
 
 
