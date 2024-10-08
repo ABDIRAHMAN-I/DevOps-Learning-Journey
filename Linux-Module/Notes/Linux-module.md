@@ -1,20 +1,17 @@
 # Table of Contents
+
 1. [What is Linux?](#what-is-linux)
-    - [What are Linux distributions?](#what-are-linux-distributions?)    
-    - [Setting up Linux on your computer](#setting-up-linux-on-your-computer)  
-    - [Linux terminal](#linux-terminal)
-2. [Linux file system](#linux-file-system)
-3. [Linux shortcuts](#linux-shortcuts)
-4. [Linux Commands](#linux-commands)
-    - [What are Linux commands](#what-are-linux-commands)
+2. [What are Linux distributions?](#what-are-linux-distributions?)    
+3. [Setting up Linux on your computer](#setting-up-linux-on-your-computer)  
+4. [Linux terminal](#linux-terminal)
+5. [Linux file system](#linux-file-system)
+6. [Linux shortcuts](#linux-shortcuts)
+7. [What are Linux commands](#what-are-linux-commands)
+8. [Linux Commands](#linux-commands)
     - [File and Directory Management Commands](#file-and-directory-management-commands)
-5. [](#)
-6. [](#)
-7. [](#)
-8. [](#)  
 9. [](#)
 10. [](#)
-11. [](#)
+
 
 
 
@@ -94,8 +91,6 @@ Clear the screen - **Ctrl L**
 
 How to exit the typing mode - **Ctrl D**
 
-## Linux Commands
-
 ## **What are Linux commands?**
 
 Textual instructions that tell the OS what to do can be entered directly into the terminal, are case-sensitive, and can include various options and arguments to modify their behavior.
@@ -112,6 +107,8 @@ Textual instructions that tell the OS what to do can be entered directly into th
 **The _options_ modify how the action is performed.**
 
 **The _arguments_ tell the command what files or directories to act on.**
+
+## Linux Commands
 
 ## File and Directory Management Commands
 
