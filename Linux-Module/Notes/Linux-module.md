@@ -196,3 +196,213 @@ These commands provide information about users, groups, and permissions.
 - **`id`**  :  Displays user or group ID
     - **Example**: `id` [OPTION] [USERNAME]
 
+## Getting Help and Documentation
+These commands provide help, documentation, and detailed information about other commands.
+
+- **`man`**: Displays the manual pages for a command, providing detailed usage and options.
+    - **Example**: `man ls`.
+
+## System Status and Information
+These commands provide information about system environment and process status.
+
+- **`echo $PATH`**: Displays the directories where executable files are searched for by the system.
+- bash - to switch to bash
+
+## Networking and Remote Management Commands
+These commands deal with networking and managing systems over a network.
+
+- **`ssh`**: Securely logs into a remote machine.
+    - **Example**: `ssh username@remote_host`
+- **`scp`**: Securely copies files between hosts.
+    - **Example**: `scp file.txt username@remote_host:/path/to/destination`
+- **`ping`**: Helps you test if a device is reachable and how fast the connection is.
+    - **Example**: `ping (IP address or domain)`
+    - If it keeps running and you want to stop it, press **Ctrl + C**.
+- **`curl`**: Transfers data from or to a server.
+    - **Example**: `curl https://example.com`
+- **`traceroute`**: shows the path data takes from your computer to a destination, displaying each hop (step) such as routers and servers along the way to its destination.
+    - **Example**: `traceroute (IP address or domain)`
+- **`nslookup`**: is a tool that helps you find the **IP address** of a website (domain) or the **website** that matches an IP address.
+    - **Example**: `nslookup example.com`
+- **`dig`**: Performs detailed DNS queries, returning various DNS records like IP addresses or mail servers for a domain.
+    - **Example**: `dig example.com`
+
+These commands are often used together in network management, file transfers, or remote system management.
+
+
+## Permission and Ownership Commands
+
+These commands are used to manage who can access, modify, or execute files and directories.
+
+- **`chmod`**: Changes the permissions of files and directories.
+
+       usage example: `chmod` [who][operator][permissions] [filename]
+
+**`[who]`**: One or more of `u`, `g`, `o`, or `a`.
+
+**`[operator]`**: `+`, ``, or `=`.
+
+**`[permissions]`**: One or more of `r`, `w`, or `x`.
+
+**`[filename]`**: The file or directory to modify.
+
+### Permissions Overview:
+
+**`r`**: Read permission.
+
+**`w`**: Write permission.
+
+**`x`**: Execute permission.
+
+### Permission Groups:
+
+**`u`**: User (the file owner).
+
+**`g`**: Group (users who belong to the file's group).
+
+**`o`**: Others (all other users).
+
+**`a`**: All (applies to `u`, `g`, and `o`).
+
+### Symbolic Operators:
+
+**`+`**: Adds a permission.
+
+`-`: Removes a permission.
+
+**`=`**: Sets the exact permission, replacing the previous permissions.
+
+### 
+
+- **`chown`**: Changes the ownership of a file or directory.
+    
+    usage example: `chown` [options] [new_owner][:new_group] file_or_directory
+    
+    **`new_owner`**: The new owner (user) of the file or directory.
+    
+    **`new_group`**: The new group of the file or directory.
+    
+    **`file_or_directory`**: The file or directory whose ownership is being changed.
+    
+     **`options`**: Additional options, such as recursive changes.
+    
+- **`chown -R`** - used to **recursively change the ownership** of files and directories, including all subdirectories and files within the specified directory. The `-R` option stands for **recursive**, meaning it applies the ownership change to every file and subdirectory under the given directory.
+- **`chgrp`**: Changes the group ownership of a file or directory.
+    
+    usage example: `chgrp` [options] new_group file_or_directory
+    
+    **`new_group`**: The name of the new group that you want to assign to the file or directory.
+    
+    **`file_or_directory`**: The file or directory whose group ownership you want to change.
+    
+    **`options`**: Various options to control how `chgrp` behaves (like recursive changes).
+    
+
+### **Numeric Format (Octal)**
+
+Permissions can be represented numerically. Each permission is assigned a value:
+
+- **Read (`r`)**: 4
+- **Write (`w`)**: 2
+- **Execute (`x`)**: 1
+
+The total numeric value represents the permissions for **Owner**, **Group**, and **Others**. For example:
+
+- **7 (rwx)**: Full permission (read, write, execute).
+- **6 (rw-)**: Read and write only.
+- **5 (r-x)**: Read and execute only.
+- **0 (---)**: No permissions.
+
+### Example: Setting Permissions Numerically
+
+To give the **owner full permissions**, the **group read and execute permissions**, and **others read-only** permissions, you would use:
+
+```bash
+bash
+Copy code
+chmod 754 filename
+
+```
+
+Explanation:
+
+- **7 (rwx)**: Owner has read, write, and execute permissions.
+- **5 (r-x)**: Group has read and execute permissions.
+- **4 (r--)**: Others have read-only permission.
+
+### **Symbolic Format**
+
+In symbolic format, you specify the user category and the permission you want to set:
+
+- **u**: User (owner)
+- **g**: Group
+- **o**: Others
+- **a**: All (user, group, others)
+
+You can add (`+`), remove (`-`), or set (`=`) specific permissions.
+
+### Example: Setting Permissions Symbolically
+
+To give the **owner write permissions**, and remove execute permissions for **group and others**:
+
+```bash
+bash
+Copy code
+chmod u+w,go-x filename
+
+```
+
+Explanation:
+
+- **u+w**: Adds write permission for the owner.
+- **go-x**: Removes execute permissions for group and others.
+
+**Make a file executable**:
+
+```bash
+bash
+Copy code
+chmod +x script.sh
+
+```
+
+- This gives everyone execute permission for `script.sh`.
+- **Set full permissions for the owner and read-only for others**:
+    
+    ```bash
+    bash
+    Copy code
+    chmod 744 myfile.txt
+    
+    ```
+    
+    - Owner gets read, write, execute (`rwx`), and others get read-only (`r--`).
+- **Remove write permissions for everyone**:
+    
+    ```bash
+    bash
+    Copy code
+    chmod a-w filename
+    
+    ```
+    
+    - This removes write permission for all users (owner, group, and others).
+
+
+## Downloading files
+
+- **`curl`**: A tool to transfer data from or to a server, using various protocols such as HTTP, FTP, and more. It is commonly used for interacting with APIs.
+    - **Example**: `curl https://example.com`
+- **`wget`**: A command-line utility for downloading files from the web. It supports downloading files via HTTP, HTTPS, and FTP, and is great for handling large files and recursive downloads.
+    - **Example**: `wget https://example.com/file.zip`
+
+
+
+
+
+
+
+
+
+
+
