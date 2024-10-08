@@ -26,14 +26,14 @@
 
 
 
-## What is Linux?
+# What is Linux?
 
 An open-source, operating system. It’s the backbone of many servers, networks, and cloud infrastructure.
 
 (Linux is open source, which means that anyone can study, modify, and redistribute the source code. This is different from other operating systems, such as Windows and MacOS, which are proprietary)
 
 
-## What are Linux distributions?
+# What are Linux distributions?
 
 There are many different versions of Linux called distributions (distro).
 
@@ -44,14 +44,14 @@ Linux is the **engine** and distributions are the **vehicle.**
 each distro has its strengths and is suited to different tasks.
 
 
-## Setting up Linux on your computer
+# Setting up Linux on your computer
 
 Use virtualization to run Linux/Ubuntu on your operating system.
 
 **Virtual Box** is a free virtualization tool that allows you to run Ubuntu on your OS.
 
 
-## Linux terminal
+# Linux terminal
 
 The terminal is a command line interface, which allows you to interact with your operating system by typing commands. It gives you direct control of your OS. 
 
@@ -62,7 +62,7 @@ some tasks include:
 - perform a wide range of administrative tasks
 
 
-## Linux file system
+# Linux file system
 
 Each directory in the Linux file system has a specific purpose, and together they help the system stay organized and efficient.
 
@@ -88,7 +88,7 @@ Each directory in the Linux file system has a specific purpose, and together the
 
 
 
-## Linux shortcuts
+# Linux shortcuts
 
 How to open up the terminal - **Ctrl Alt T**
 
@@ -98,7 +98,7 @@ Clear the screen - **Ctrl L**
 
 How to exit the typing mode - **Ctrl D**
 
-## **What are Linux commands?**
+# **What are Linux commands?**
 
 Textual instructions that tell the OS what to do can be entered directly into the terminal, are case-sensitive, and can include various options and arguments to modify their behavior.
 
@@ -115,7 +115,7 @@ Textual instructions that tell the OS what to do can be entered directly into th
 
 **The _arguments_ tell the command what files or directories to act on.**
 
-## Linux Commands
+# Linux Commands
 
 ## File and Directory Management Commands
 
@@ -153,4 +153,46 @@ These commands are used for navigating directories, managing files, and viewing 
         - **Example**: `mkdir -p /parent_directory/sub_directory`.
 - **`rmdir`**: Removes an empty directory.
 
+## Searching and Filtering
+
+These commands are used to search for text patterns within files or filter output.
+
+- **`grep`**: Searches for patterns or specific text in a file.
+    - **Example**: `grep "pattern" filename`.
+
+## **User and Group Management Commands**:
+
+These commands manage users, groups, and their permissions, as well as perform administrative tasks.
+
+- **`sudo`**: Executes commands with superuser (root) privileges.
+    - **Example**: `sudo command`.
+- **`sudo su`**: Switches to the root user for performing multiple administrative tasks.
+    - **Example**: `sudo su` (use `exit` to return to normal user).
+- **`su`**: Switches to another user account.
+    - **Example**: `su - username`.
+- **`sudo usermod -aG (groupname) (username)`**: Adds a user to a group.
+    - **Example**: `sudo usermod -aG sudo alice`.
+- **`sudo deluser (user) sudo`**: Removes a user from the `sudo` group.
+    - **Example**: `sudo deluser alice sudo`.
+- **`sudo groupadd (name of group)`**: Creates a new group.
+    - **Example**: `sudo groupadd developers`.
+- **`sudo groupdel (groupname)`**: Deletes a group.
+    - **Example**: `sudo groupdel developers`.
+- **`sudo gpasswd -d (username) (groupname)`**: Removes a user from a group.
+    - **Example**: `sudo gpasswd -d alice developers`.
+- **`sudo useradd (username)`**: Creates a new user account.
+    - **Example**: `sudo useradd bob`.
+- **`sudo passwd (username)`**: Sets or changes the password for a user.
+    - **Example**: `sudo passwd bob`.
+
+## Displaying User and Group Information
+
+These commands provide information about users, groups, and permissions.
+
+- **`groups`**: Displays the groups a user belongs to.
+    - **Example**: `groups username`.
+- **`whoami`**: Displays the current logged-in user.
+    - **Example**: `whoami`.
+- **`id`**  :  Displays user or group ID
+    - **Example**: `id` [OPTION] [USERNAME]
 
