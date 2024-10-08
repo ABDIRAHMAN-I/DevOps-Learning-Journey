@@ -9,8 +9,15 @@
 7. [What are Linux commands](#what-are-linux-commands)
 8. [Linux Commands](#linux-commands)
     - [File and Directory Management Commands](#file-and-directory-management-commands)
-9. [](#)
-10. [](#)
+    - [Searching and Filtering](#searching-and-filtering)
+    - [User and Group Management Commands](#user-and-group-management-commands)
+    - [Displaying User and Group Information](#displaying-user-and-group-information)
+    - [Getting Help and Documentation](#getting-help-and-documentation)
+    - [System Status and Information](#system-status-and-information)
+    - [Networking and Remote Management Commands](#networking-and-remote-management-commands)
+    - [Permission and Ownership Commands](#permission-and-ownership-commands)
+    - [Downloading Files](#downloading-files)
+11. [](#)
 
 
 
