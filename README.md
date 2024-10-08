@@ -1,5 +1,5 @@
 
-![DevOps](images/devops 2.jpg)
+
 
 # DevOps Learning Journey
 
