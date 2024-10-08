@@ -112,32 +112,38 @@ Textual instructions that tell the OS what to do can be entered directly into th
 
 ## File and Directory Management Commands
 
-- **`ls`**: View the contents of the current directory.
-    - **`ls -a`**: List all files and directories, including hidden files (files or directories starting with a dot (`.` will not appear with a regular `ls` command)).
-    - **`ls -l`**: Provide detailed information about files and directories, including:
-        - Permissions
-        - Owner
-        - Group
-        - Size
-        - Modification time
-        - More
-    - **`ls -R`**: List all files and directories recursively, including all subdirectories and their contents, to show the directory structure in detail. It’s useful for understanding the hierarchy and contents of directories in more detail.
-- **`cp`**: Copies files or directories. Cannot copy directories. **`cp`** [file_you_want_to_copy] source destination
-    - **`cp -r`** - copies **directories** and their contents from one location to another.  **`cp -r`** [directory_you_want_to_copy] source destination
-- **`mv`**: Moves or renames files or directories. *rename: **`mv`** (old_filename) (new_filename)* / *move: **`mv`** (file_you_want_to_move) (directory_you_want_to move_it_to)*
+These commands are used for navigating directories, managing files, and viewing directory contents.
+
+- **`pwd`**: Displays the full path of the current directory.
+- **`cd`**: Changes the directory; **`cd ..`** moves one directory back.
+- **`cd ~`**: Navigates to the home directory of the current user.
+- **`~`**: Tilde symbol represents the home directory of the current user.
+- **`ls`**: Lists files and directories in the current directory.
+    - **`ls -a`**: Lists all files, including hidden files (files starting with `.`).
+    - **`ls -l`**: Provides detailed file and directory information, including permissions, owner, group, size, and modification time.
+    - **`ls -R`**: Lists all files and directories recursively, including subdirectories.
+- **`cat`**: Displays the contents of a file or concatenates multiple files.
+    - **Example**: `cat file1.txt file2.txt > combined.txt`.
+    - **Interactive Mode**: You can use `cat` to create or append content interactively.
+- **`echo`**: Displays text or writes it to a file.
+    - **Example**: `echo "Hello" > file.txt` (overwrite).
+    - **Example**: `echo "Hello" >> file.txt` (append).
+- **`touch`**: Creates an empty file or updates the timestamp of an existing file.
+    - **Example**: `touch filename.txt`.
+    - **Example**: `touch file1.txt file2.txt` (creates multiple files).
+- **`cp`**: Copies files from one location to another.
+    - **Example**: `cp source_file destination_file`.
+    - **`cp -r`**: Copies directories recursively, including all subdirectories and their contents.
+        - **Example**: `cp -r source_directory destination_directory`.
+- **`mv`**: Moves or renames files or directories.
+    - **Example**: `mv old_filename new_filename` (renames a file).
+    - **Example**: `mv file.txt /destination_folder` (moves a file).
 - **`rm`**: Removes (deletes) files.
-    - **`rm -r`:** used to remove (delete) directories.
-    - **`rm -rf` /** - Deletes Everything. **extremely dangerous** and should never be run carelessly
-    
-    **`rm`**: Stands for "remove" and is used to delete files or directories.
-    
-    **`r`**: The recursive flag, meaning it will delete the directory and all of its contents, including subdirectories and their contents.
-    
-    **`f`**: The force flag, which suppresses warnings and forces the deletion of files, even if they are write-protected.
-    
-    **`/`**: The root directory, which is the top-level directory of the entire file system.
-- **`mkdir` `[make_directory]`**: Creates a new directory.
-    - **`mkdir -p [directory_path]`**: Create a directory and any necessary parent directories.
+    - **`rm -r`**: Deletes directories and their contents recursively.
+    - **`rm -rf /`**: Forcefully deletes everything, including the root directory (extremely dangerous).
+- **`mkdir`**: Creates a new directory.
+    - **`mkdir -p`**: Creates directories along with necessary parent directories.
+        - **Example**: `mkdir -p /parent_directory/sub_directory`.
 - **`rmdir`**: Removes an empty directory.
-- **`touch`**: Creates an empty file or updates the timestamp of an existing file. ex:**`touch`** filename.txt.
-This will create a new, empty file named filename.txt in the current directory. If the file already exists, it simply updates its last modified and last accessed timestamps without changing the content. You can also create multiple empty files at once by listing them after **`touch`**  file1.txt  file2.txt  file3.txt
+
+
