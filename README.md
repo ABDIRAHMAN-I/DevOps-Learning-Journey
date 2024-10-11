@@ -15,76 +15,50 @@ This repository is organized into multiple modules, each representing a core are
 
 
 ```bash
-devops-learning/
-├── Linux/
+DevOps-learning/
+├── Linux-Module/
 │   ├── notes/
-│   │   ├── linux-basics.md
-│   │   ├── file-system.md
-│   │   └── shell-scripting.md
-│   ├── labs/
-│   │   ├── lab1-basic-commands.md
-│   │   ├── lab2-file-permissions.md
-│   │   └── lab3-shell-scripting.md
-│   └── projects/
-│       ├── project1-custom-script/
-│       │   ├── script.sh
-│       │   └── README.md
-│       └── project2-linux-server-setup/
-│           ├── setup-notes.md
-│           └── README.md
+│   │  └── Linux-module.md
+│   ├── Challenges/
+│   │   └── Over-the-wire-bandit-game.md
+│   ├──  projects/
+│   │   ├── project1
+│   │   └── project2
+│   └── Interview-Questions/
+│   │   └── Questions-Linux
+│          
+├── Bash-Module/
+│   ├── notes/
+│   │  └── Bash-module.md
+│   ├── Challenges/
+│   │   └── 
+│   ├──  projects/
+│   │   ├── project1
+│   │   └── project2
+│   └── Interview-Questions/
+│   │   └── Questions-Bash
 │
-├── Git/
+├── Git-Module/
 │   ├── notes/
-│   │   ├── version-control-basics.md
-│   │   ├── branching-and-merging.md
-│   │   └── git-workflow.md
-│   ├── labs/
-│   │   ├── lab1-initial-commit.md
-│   │   ├── lab2-branching.md
-│   │   └── lab3-merge-conflicts.md
-│   └── projects/
-│       ├── project1-git-repo-setup/
-│       │   ├── init-repo.sh
-│       │   └── README.md
-│       └── project2-collaboration-workflow/
-│           ├── collaboration-notes.md
-│           └── README.md
-│
-├── AWS/
+│   │  └── Git-module.md
+│   ├── Challenges/
+│   │   └── 
+│   ├──  projects/
+│   │   ├── project1
+│   │   └── project2
+│   └── Interview-Questions/
+│   │   └── Questions-Git
+│  
+├── Networking-Module/
 │   ├── notes/
-│   │   ├── aws-overview.md
-│   │   ├── ec2-basics.md
-│   │   └── s3-setup.md
-│   ├── labs/
-│   │   ├── lab1-ec2-instance.md
-│   │   ├── lab2-s3-bucket.md
-│   │   └── lab3-vpc-setup.md
-│   └── projects/
-│       ├── project1-hosting-on-ec2/
-│       │   ├── deployment-notes.md
-│       │   └── README.md
-│       └── project2-static-website-on-s3/
-│           ├── website-files/
-│           └── README.md
-│
-├── Terraform/
-│   ├── notes/
-│   │   ├── terraform-basics.md
-│   │   ├── providers-and-modules.md
-│   │   └── state-management.md
-│   ├── labs/
-│   │   ├── lab1-terraform-setup.md
-│   │   ├── lab2-infrastructure-as-code.md
-│   │   └── lab3-terraform-modules.md
-│   └── projects/
-│       ├── project1-infrastructure-deployment/
-│       │   ├── main.tf
-│       │   ├── variables.tf
-│       │   └── README.md
-│       └── project2-multi-environment-setup/
-│           ├── dev/
-│           ├── prod/
-│           └── README.md
+│   │  └── Networking-module.md
+│   ├── Challenges/
+│   │   └── 
+│   ├──  projects/
+│   │   ├── project1
+│   │   └── project2
+│   └── Interview-Questions/
+│   │   └── Questions-Networking
 │
 └── README.md
 ```
