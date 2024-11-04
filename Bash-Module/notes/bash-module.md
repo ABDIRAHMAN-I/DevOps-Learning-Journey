@@ -2003,7 +2003,7 @@ how to make zsh your default shell, use this code - ***chsh -s /bin/zsh***
 
 how to customize your zsh, use this code - `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e4432c4-671b-44da-b6a9-778a4ef3ac58/81df2551-27f5-438a-b9ae-fb8bf9d102da/image.png)
+![image.png](Bash-Module-image.png)
 
 use this to go through the configuration again for the themes etc. ***source .zshrc***
 
